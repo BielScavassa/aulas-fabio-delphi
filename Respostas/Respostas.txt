@@ -1,0 +1,149 @@
+# Curso de Delphi - Monde
+
+Bem vindo ao curso de Delphi da Monde!
+
+O Objetivo deste curso é ensinar de forma detalhada a linguagem Object Pascal utilizada pelo Delphi e as melhores práticas de desenvolvimento utilizando o Delphi.
+
+## Como aproveitar melhor este curso?
+
+- Assista os vídeos na ordem das aulas
+- Após assistir, clone o repositório caso não tenha feito, abra o exemplo da aula, analise e faça testes com o código
+- Tenha certeza que você entendeu 100% do código do exemplo e do conteúdo da aula
+- Caso não entenda alguma parte, pergunte aos colegas de equipe
+- Acesse os links das aulas e leia a documentação
+- Responda as pergutas no final da aula, você deverá ser capaz de responder todas sem dificuldade
+- Caso não consiga responder alguma pergunta, peça ajuda
+
+**O importante é absorver 100% do conteúdo sem que haja nenhuma dúvida sobre a aula, portanto faça sem pressa.**
+
+## Aula 01
+
+[Vídeo - Estrutura de um aplicativo Delphi](https://drive.google.com/open?id=1Rl1kDKau39PQRJbN61FObfdJL7_lH4wb)
+
+### Conteúdo
+- Ordem inicialização
+- Escopo
+- Uses
+- Search Path
+- Resources
+
+### Links
+- [Programs and Units](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Programs_and_Units_(Delphi))
+
+### Perguntas
+- O que é uma diretiva de compilação?
+Uma diretiva de compliação não funciona em tempo de execução, ou seja, ela funciona no na hora de compilação do código.
+- Qual a diferença entre as sessões interface e implementation?
+Tudo que for cirado na interface de uma unit podera ser acessada por outras units, já oque for criado em implementation é unico da unit.
+- Para que serve as sessões initialization e finalization?
+initialization comoo nome já diz é a primeira coisa executada quando o codigo for compilado, 
+já o finalization é a ultima coisa que o codigo faz quando o programa for finalizado e de modo diferente da initialization a finaizatoin é executada de "baixo pra cima".
+- Qual a diferença entre o Search Path e o Library Path?
+Serch path é o local onde o delphi busca arquivos criados no programa, já o library path é a biblioteca base do delphi onde ele busca seus arquivos.	 
+- Qual a melhor prática para colocar os caminhos no Search Path?
+ultilizar o caminho relativo, ou seja, a "ultima pasta que os arquivos se encontram".
+
+## Aula 02
+
+[Vídeo - Expressões, variáveis e tipos primitivos](https://drive.google.com/open?id=1DiArQ2RWG_aSTCQU621KBfNon4Y_Fauc)
+
+### Conteúdo
+- Expressões
+- Variáveis
+- Tipos (string, numéricos, Boolean, Variant)
+- Constantes
+
+### Links
+- [Expressions](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Expressions_(Delphi))
+- [String Types](http://docwiki.embarcadero.com/RADStudio/Berlin/en/String_Types_(Delphi))
+- [Variables](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Variables_(Delphi))
+- [Declared Constants](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Declared_Constants)
+- [Variant Types](http://docwiki.embarcadero.com/RADStudio/Berlin/en/Variant_Types_(Delphi))
+- [Simple Types](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Simple_Types_(Delphi)#Enumerated_Types)
+
+### Perguntas
+- O que é uma expressão?
+É um procedimento que retorna um valor esse valor podendo ser "qualquer coisa".
+- Qual a diferença de uma variável e uma constante?
+Uma variavel como o nome já diz é um tipo que pode ser alterado, já a contante não pode ser alterada.
+- O que acontece quando passa uma variant com um valor incompatível com o tipo do parâmetro de um método?
+Ela executa o programa e durante a execução mostra o erro de incompatibilidade.
+
+## Aula 03
+
+[Vídeo - Classes](https://drive.google.com/open?id=1dN3v3RuRIFgzN-8TGDkbDV_SYix3A57d)
+
+### Conteúdo
+- Classes e Objeto
+- Properties
+- Exceptions
+- Classes estáticas
+
+### Links
+- [Classes and Objects](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Classes_and_Objects_(Delphi))
+- [Exceptions](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/Exceptions)
+
+### Perguntas
+- Qual a diferença entre uma classe e um objeto?
+Uma classe seria a "instrução" de como o objeto é montado,ou seja, não tem "valores", já o objeto é a ultilização dessa "intrução" para alocar valores do modo desejado.
+- O que o método .Free do TObject faz?
+O metodo .Free destroi o objeto criado e libera o espasso de memoria que ele ocupava. 
+- O que um construtor retorna?
+O metodo contrutor retorna um "Tobjeto", ou seja ele vai retornar a instancia para esta classe.
+- Qual a forma correta de tratar exceptions?
+A forma correta de tratar o exception é declarar um tipo de exception relativa para seu programa.(Exception sempre erda do Tipo Exception)
+- O que acontece na execução do programa quando uma exception é levantada?
+O programa mostra qual foi o erro que ocorreu e finaliza a aplicação.
+- Porque não consigo acessar um Field em um class method?
+Pois class methods não podem armazenar estados, pois ele funciona na propria classe e não em sua instancia.
+
+## Aula 04
+
+[Vídeo - Componentes](https://drive.google.com/open?id=1RzzcCYCbiqtVypkFeemFe9w-h9_vuN1_)
+
+### Conteúdo
+- Componentes
+- Eventos
+
+### Links
+- [TComponent](http://docwiki.embarcadero.com/Libraries/Tokyo/en/System.Classes.TComponent)
+
+### Perguntas
+- Qual a diferença de um componente para uma classe normal?
+A maior diferença é que o componente pode ser criado como (Self), então ele não precisa ser destruido e o Delphi cria a classe do componente para voce.
+- Qual a função do Parent de um componente?
+A função parent define onde o componente irá ser "desenhado".
+- O que é um evento?
+O evento seria um momento de execução do codigo, exemplo (OnClick), seria quando o componente for clicado pelo usuario e ao ser clicado o evento on click ocorre.
+
+## Aula 05
+
+[Vídeo - Parte 1](https://drive.google.com/open?id=1QXL_EPNHPqrqUyx92hG9DDwZGuKrqNS9)
+
+[Vídeo - Parte 2](https://drive.google.com/open?id=1uQ6JFXbHxBRBKRywJExV3XZX9qgDD7a8)
+
+### Conteúdo
+- dbExpress
+- TSQLConnection
+- TSQLQuery
+- TDataSetProvider
+- TClienteDataSet
+- TDataSource
+
+### Links
+- [dbExpress Controls](http://docwiki.embarcadero.com/RADStudio/Tokyo/en/DBExpress_Controls)
+- [TDataSetProvider](http://docwiki.embarcadero.com/Libraries/Tokyo/en/Datasnap.Provider.TDataSetProvider)
+
+### Perguntas
+- Qual a função do TDataSetProvider?
+E´ultilizado para converter as informações entre o banco e os "clientes"
+- O que é CachedUpdates?
+É ultilizado para armazernar as alterações feitas e as armazena na memoria e após a cahamda do applyupdates ele envia esse pacote de alterações para o BD.
+- O que o ApplyUpdates(0) faz?
+Envia as alterações para o BD.
+- O que é a opção poPropagateChanges do TDataSetProvider?
+Envia o "Delta"(pacote de alterações que estão no campo "Serial") para o "ClientDataSet".
+- O que o método Cancel do TClientDataset faz?
+Cancela as operações que estavam sendo efetuadas.
+- Qual a diferença entre upWhereAll e upWhereKeyOnly no UpdateMode do TDataSetProvider?
+WhereAll é ultilizado quando não se tem PK no banco, já o KeyOnly se usa quando tem a PK, normalmente ultilizado para Id ou coisas do tipo que serão geradas automaticamente.

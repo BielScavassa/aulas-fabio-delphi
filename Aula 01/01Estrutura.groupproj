@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{36A894A5-9156-496B-8EAF-DE7DCEF7231A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AppConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AppVCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AppConsole">
+        <MSBuild Projects="AppConsole.dproj"/>
+    </Target>
+    <Target Name="AppConsole:Clean">
+        <MSBuild Projects="AppConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppConsole:Make">
+        <MSBuild Projects="AppConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AppVCL">
+        <MSBuild Projects="AppVCL.dproj"/>
+    </Target>
+    <Target Name="AppVCL:Clean">
+        <MSBuild Projects="AppVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppVCL:Make">
+        <MSBuild Projects="AppVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AppConsole;AppVCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AppConsole:Clean;AppVCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AppConsole:Make;AppVCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

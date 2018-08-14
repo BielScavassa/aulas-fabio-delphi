@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FAF57CA3-D988-4DAB-8D7E-1156D93F824D}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ProjetoEventosForm.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjetoEventosForm">
+        <MSBuild Projects="ProjetoEventosForm.dproj"/>
+    </Target>
+    <Target Name="ProjetoEventosForm:Clean">
+        <MSBuild Projects="ProjetoEventosForm.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjetoEventosForm:Make">
+        <MSBuild Projects="ProjetoEventosForm.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjetoEventosForm"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjetoEventosForm:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjetoEventosForm:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
